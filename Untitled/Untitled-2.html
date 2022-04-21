@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Arutlev kirjand</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="text-align:center">
+	<header style="color:brown">
+		<h1>A product list</h1>
+	</header>
+	<main>
+    <div id="cart" onclick="displayList()">
+      <a id="nr">0</a>
+      <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png">
+    </div>
+    <li id="list">
+     
+    </li>
+		<li id="container">
+			<div class="item" id="1">
+				<h3>T-shirt 1</h3>
+				<p>Mshioter//</p>
+				<div class="palette">
+					<button class="circle1" onclick="choose('img/White.jpg','img1','Img1')"></button>
+          <button class="circle2" onclick="choose('img/blue.jpg','img1','Img1')"></button>
+          <button class="circle3" onclick="choose('img/red.jpg','img1','Img1')"></button>
+          <button class="circle4" onclick="choose('img/lmfao.png','img1','Img1')"></button>
+        </div>
+        <img id="img1" src="img/White.jpg" :hover>
+        <button class="add" onclick="add(1)">Add to cart</button>
+       </div>
+       <div id="addShit" class="item">
+         <button onclick="createI()">+</button>
+       </div>
+     </li>
+  </main>
+  <footer style="color:grey">
+     <p>Made by <a href="https://www.youtube.com/channel/UCgClDYBmkiCWLzA_yGcUafg">n0ll</a></p>
+  </footer>
+  <script src="script.js"></script>
+  </body>
+</html>

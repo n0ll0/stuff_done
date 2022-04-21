@@ -1,0 +1,99 @@
+#container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.item {
+  border: 2px grey;
+  border-radius: 4px;
+  width: 160px;
+  padding: 2px;
+}
+.item :hover {
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+}
+.palette  {
+  border: 2px black outset;
+  border-radius: 7px; 
+  background-color: lightgray;
+}
+.palette button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.palette .circle1 {
+  background-color: white;
+}
+.palette .circle2 {
+  background-color: blue;
+}
+.palette .circle3 {
+  background-color: red;
+}
+.palette .circle4 {
+  background-color: black;
+}
+img {
+  border-radius: 3px;
+  width: auto;
+  height: 123px;
+}
+p {
+  color: darkgrey;
+}
+a {color:gray;}
+#cart {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  padding: 30px;
+}
+#cart img {
+  width: 35px !important;
+  height: auto;
+}
+a#nr {
+  background-color: #c00;
+  color: #eee !important;
+  border-radius: 45%;
+  position: relative;
+  padding: 1px 5px;
+  font-weight: bold;
+  font: outline #000;
+}
+.add {
+  border: 2px #555 outset;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  padding: 7px;
+}
+#addShit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#list {
+  display: none;
+  background-color: #eef;
+  overflow: scroll;
+  flex-direction: column;
+  position: absolute;
+  height: 70%;
+  border: #111 3px solid;
+  border-radius: 8px;
+  width: 152px;
+  margin: 8px;
+  padding: 4px;
+  justify-items: center;
+  right: 2px;
+  top: 95px;
+}
+#list element {
+  width: 60px;
+  height: 90px;
+}
