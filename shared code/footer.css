@@ -1,0 +1,247 @@
+footer {
+  background-color: #69a9ff;
+}
+
+footer p,
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer a {
+  color: white;
+}
+
+/*===================================================
+                DESKTOP MEDIA QUERY
+=====================================================*/
+@media (min-width: 601px) {
+  footer {
+    height: 610px;
+    width: 100%;
+  }
+
+  #footer_black {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 2% 0;
+
+    background-color: black;
+    width: 100%;
+    height: 50%;
+  }
+
+  #footer_blue {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 0;
+
+    width: 100%;
+    height: 50%;
+  }
+
+  footer h4 {
+    cursor: pointer;
+  }
+
+  #footer_socialmedia {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 18.5%;
+    height: min(max(85px), 4.3vw);
+    background-color: white;
+    border-radius: 20px;
+  }
+
+  a {
+    margin: 0;
+    padding: 0;
+  }
+
+  #footer_socialmedia a {
+    height: 75%;
+    aspect-ratio: 1/1;
+
+    transition: height 0.3s;
+  }
+
+  #footer_socialmedia a:hover {
+    transition: height 0.2s;
+    height: 90%;
+  }
+
+  #footer_socialmedia img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.2));
+  }
+
+  #footer_socialmedia img:active {
+    transition: height 0.1s;
+    height: 100%;
+  }
+
+  /* some tooltip stuff  >>*/
+  .tooltip {
+    position: relative;
+  }
+
+  .tooltip .tooltiptext {
+    width: max-content;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 10px;
+    opacity: 0;
+
+    transition: opacity 0.2s;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+
+    left: 0.51vw;
+    bottom: 60%;
+    transform: translateY(-60%);
+  }
+
+  .tooltip:hover .tooltiptext {
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+
+  .visible_tooltip {
+    visibility: visible;
+    animation: fade_tooltip 0.2s;
+  }
+
+  @keyframes fade_tooltip {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .invisible_tooltip {
+    visibility: hidden;
+  }
+
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.75) transparent transparent transparent;
+  }
+
+  .tooltip span {
+    user-select: none;
+  }
+}
+
+/* ====================================================== 
+                    MOBILE MEDIA QUERY
+====================================================== */
+
+@media (max-width: 600px) {
+  footer {
+    height: 500px;
+    width: 100%;
+  }
+
+  #footer_black {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 5% 0;
+
+    background-color: black;
+    width: 100%;
+    height: 200px;
+  }
+
+  #footer_blue {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 5% 0;
+
+    width: 100%;
+    height: 300px;
+  }
+
+  #footer_socialmedia {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 75%;
+    height: 85px;
+    background-color: white;
+    border-radius: 20px;
+  }
+
+  #footer_socialmedia img {
+    height: 75%;
+    aspect-ratio: 1/1;
+
+    object-fit: contain;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.2));
+
+    transition: height 0.6s;
+  }
+
+  #footer_socialmedia img:hover {
+    transition: height 0.6s;
+    height: 90%;
+  }
+
+  #footer_socialmedia img:active {
+    transition: height 0.1s;
+    height: 100%;
+  }
+
+  footer h5:last-child {
+    margin-top: 20px;
+  }
+
+  /* some tooltip stuff  for mobile >>*/
+  .tooltip {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+
+  .visible_tooltip {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+}

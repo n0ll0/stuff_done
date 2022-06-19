@@ -1,0 +1,322 @@
+/*TODO
+
+fix font sizes, h1 kinda too big on desktop
+also all fonts a bit too big on mobile
+
+
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces&family=Inter&family=Open+Sans&display=swap");
+
+.material-icons-outlined {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 800, "GRAD" 200, "opsz" 48;
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+/*
+font-family: 'Inter', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+html {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  background-color: #ffffff; /* #3f3f3f;*/
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --brandcolor: #006cff;
+  --lightblue: #3188ff;
+  object-fit: scale-down;
+}
+
+#pixel {
+  width: 110px;
+  height: 60px;
+  padding: 0;
+}
+
+.inline {
+  display: inline;
+  box-sizing: content-box;
+}
+
+.text-mol h1 {
+  color: var(--brandcolor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span {
+  display: block;
+}
+
+button h1,
+button h2,
+button h3,
+button h4,
+button h5,
+button p {
+  user-select: none;
+}
+
+img {
+  user-select: none;
+}
+
+.bluefill {
+  width: max-content;
+  height: min-content;
+  padding: 5px 15px;
+
+  border: 0px;
+  border-radius: 10px;
+  background-color: var(--brandcolor);
+  transition: background-color 0.15s;
+}
+
+.blueempty {
+  width: max-content;
+  height: min-content;
+  padding: 5px 15px;
+
+  color: var(--brandcolor);
+  border: 3.5px var(--brandcolor) solid;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: border 0.15s, background-color 0.15s;
+}
+
+.bluefill:hover {
+  background-color: #00347e;
+  transition: background-color 0.1s;
+}
+.blueempty:hover {
+  border: 3.5px #00347e solid;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: border 0.1s, background-color 0.1s;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+/*===================================================
+                DESKTOP MEDIA QUERY
+=====================================================*/
+
+@media (min-width: 601px) {
+  section {
+    overflow: hidden;
+    height: 100vh; /* for desktops, add maybe some fixed height sizes using minmax or smth*/
+  }
+
+  .text-mol {
+    padding: 0 12.25% 0 12.25%;
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1;
+  }
+
+  .text-mol p {
+    margin: min(max(40px), 2vw) 0 0 0;
+  }
+
+  h1 {
+    font-weight: 900;
+    font-size: min(max(128px), 8vw);
+    line-height: min(max(155px), 9.7vw);
+    letter-spacing: -0.007em;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: min(max(64px), 4vw);
+    line-height: min(max(77px), 4.8vw);
+    letter-spacing: -0.014em;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: min(max(48px), 3vw);
+    line-height: min(max(58px), 3.6vw);
+    letter-spacing: -0.0245em;
+  }
+
+  h4 {
+    font-weight: 400;
+    font-size: min(max(32px), 1.63vw);
+    line-height: min(max(39px), 2vw);
+    letter-spacing: -0.0245em;
+  }
+
+  h5 {
+    font-weight: 300;
+    font-size: min(max(16px), 2vw);
+    line-height: min(max(19px), 2vw);
+    letter-spacing: -0.0245em;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: min(max(48px), 3vw);
+    line-height: min(max(58px), 3.6vw);
+    letter-spacing: -0.0245em;
+  }
+
+  span {
+    font-weight: 400;
+    font-size: min(max(24px), 1.22vw);
+    line-height: min(max(29px), 1.47vw);
+    letter-spacing: -0.03em;
+  }
+
+  .bluefill p {
+    color: white;
+    font-weight: 400;
+    font-size: min(max(36px), 1.82vw);
+    line-height: min(max(44px), 2.3vw);
+    letter-spacing: -0.0245em;
+    margin: 0;
+  }
+
+  .blueempty p {
+    color: var(--brandcolor);
+    font-weight: 400;
+    font-size: min(max(36px), 1.82vw);
+    line-height: min(max(44px), 2.3vw);
+    letter-spacing: -0.0245em;
+    margin: 0;
+  }
+}
+
+/* ====================================================== 
+                    MOBILE MEDIA QUERY
+====================================================== */
+
+@media (max-width: 600px) {
+  section {
+    overflow: hidden;
+  }
+
+  .text-mol {
+    width: 100%;
+    padding: 0 12.25% 0 12.25%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-mol p {
+    margin: min(max(65px), 20vw) 0 0 0;
+  }
+
+  h1 {
+    font-weight: 900;
+    font-size: min(max(76px), 12.5vw);
+    line-height: min(max(92px), 14.5vw);
+    letter-spacing: -0.016em;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: min(max(48px), 10vw);
+    line-height: min(max(52px), 12vw);
+    letter-spacing: -0.0245em;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: -0.0245em;
+  }
+
+  h4 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.03em;
+  }
+
+  h5 {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.0245em;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: min(max(32px), 8vw);
+    line-height: min(max(39px), 10vw);
+    letter-spacing: -0.03em;
+  }
+
+  .bluefill p {
+    color: white;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.0245em;
+    margin: 0;
+  }
+
+  .blueempty p {
+    color: var(--brandcolor);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.0245em;
+    margin: 0;
+  }
+}

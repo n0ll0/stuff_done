@@ -1,0 +1,196 @@
+/* to do
+
+convert text sizes to vw
+
+*/
+
+#finalcta {
+  background: white;
+}
+
+/*===================================================
+                DESKTOP MEDIA QUERY
+=====================================================*/
+@media (min-width: 601px) {
+  #finalcta > .text-mol {
+    padding: 0;
+    width: 100%;
+  }
+
+  #finalcta {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    height: max(min(100vh), 1000px);
+    padding: 3% 12.25%;
+  }
+
+  #plans {
+    width: 100%;
+    height: min-content;
+    margin: auto 0;
+    padding: 0 15%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: no-wrap;
+  }
+
+  #plans .plan {
+    margin: 0px 20px;
+  }
+
+  .plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 0 1%;
+
+    border: var(--lightblue) solid 5px;
+    border-radius: 25px;
+
+    height: min(
+      max(550px),
+      42.5vw
+    ); /*test with different sized screens, 35vw might be better for height*/
+    width: min(max(415px), 35vw);
+    background-color: white;
+    text-align: center;
+  }
+
+  .plan p,
+  .plan h5 {
+    color: var(--lightblue);
+  }
+
+  .plan > p:first-child {
+    margin: 15px 0 10px 0;
+  }
+
+  #finalcta button {
+    width: max-content;
+    height: min-content;
+    padding: 5px 15px;
+
+    border: 0px;
+    border-radius: 10px;
+    background-color: var(--brandcolor);
+    transition: background-color 0.15s;
+  }
+
+  #finalcta button:hover {
+    background-color: #00347e;
+    transition: background-color 0.1s;
+  }
+
+  #finalcta button p {
+    color: white;
+    font-weight: 400;
+    font-size: min(max(36px), 1.82vw);
+    line-height: min(max(44px), 2.3vw);
+    letter-spacing: -0.0245em;
+    margin: 0;
+  }
+
+  .price_disclaimer {
+    height: min-content;
+    width: 100%;
+  }
+}
+
+/* ====================================================== 
+                    MOBILE MEDIA QUERY
+====================================================== */
+
+@media (max-width: 600px) {
+  #finalcta > .text-mol {
+    padding: 0;
+    width: 100%;
+  }
+
+  #finalcta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    height: min-content;
+    padding: 3% 12.25%;
+  }
+
+  #plans {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #plans .plan:first-child {
+    margin: 30px 0;
+  }
+
+  .plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 0 1%;
+
+    border: var(--lightblue) solid 5px;
+    border-radius: 25px;
+
+    height: 435px;
+    max-width: 350px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+  }
+
+  .plan p,
+  .plan h5 {
+    color: var(--lightblue);
+  }
+
+  .plan > p:first-child {
+    margin: 15px 0 10px 0;
+  }
+
+  #finalcta button {
+    width: max-content;
+    height: min-content;
+    padding: 5px 15px;
+
+    border: 0px;
+    border-radius: 10px;
+    background-color: var(--brandcolor);
+    transition: background-color 0.15s;
+  }
+
+  #finalcta button:hover {
+    background-color: #00347e;
+    transition: background-color 0.1s;
+  }
+
+  #finalcta button p {
+    color: white;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.0245em;
+    margin: 0;
+  }
+
+  .price_disclaimer {
+    height: min-content;
+    width: 100%;
+  }
+}

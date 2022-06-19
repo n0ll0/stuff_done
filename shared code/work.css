@@ -1,0 +1,89 @@
+/*to do
+
+make text scalable with vw!
+
+*/
+
+#work {
+  background-color: #ffffff;
+}
+
+#partners > img {
+  object-fit: contain;
+}
+
+/*===================================================
+                DESKTOP MEDIA QUERY
+=====================================================*/
+@media (min-width: 601px) {
+  #work {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 3% 0 3% 0;
+
+    height: min-content;
+  }
+
+  #partners {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: min-content;
+    padding: 2.5% 25% 2.5% 25%;
+  }
+
+  #partners > img {
+    width: 100%;
+  }
+
+  #work p:last-child {
+    color: rgba(0, 0, 0, 0.2);
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.0245em;
+  }
+}
+
+/* ====================================================== 
+                    MOBILE MEDIA QUERY
+====================================================== */
+
+@media (max-width: 600px) {
+  #work {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 7.5% 0 7.5% 0;
+
+    height: min-content;
+  }
+
+  #partners {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: min-content;
+    padding: 7.5%;
+  }
+
+  #partners > img {
+    width: 100%;
+  }
+
+  #work p:last-child {
+    color: rgba(0, 0, 0, 0.2);
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.0245em;
+  }
+}

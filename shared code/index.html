@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Ruut web design</title>
+    <script src="simplescript.js" defer></script>
+    <link href="globalstyle.css" rel="stylesheet" type="text/css" />
+    <link href="header.css" rel="stylesheet" type="text/css" />
+    <link href="personalization.css" rel="stylesheet" type="text/css" />
+    <link href="developers.css" rel="stylesheet" type="text/css" />
+    <link href="manage.css" rel="stylesheet" type="text/css" />
+    <link href="work.css" rel="stylesheet" type="text/css" />
+    <link href="final.css" rel="stylesheet" type="text/css" />
+    <link href="finalcta.css" rel="stylesheet" type="text/css" />
+    <link href="q&a.css" rel="stylesheet" type="text/css" />
+    <link href="footer.css" rel="stylesheet" type="text/css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- This is Vue -->
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <!-- Everything inside this div will be interactive thanks to Vue -->
+    <div id="app">
+      <header>
+        <div id="headercontent-mobile">
+          <img src="Favicon.svg" />
+
+          <div id="hamburger-menu" v-on:click="togglemenu()">
+            <div id="mobile_nav" class="nav-close">
+              <div class="blueline"></div>
+              <div id="nav">
+                <nav>
+                  <a href="#final">How to</a>
+                  <a href="#plans">Pricing</a>
+                  <a href="#plans">Get a site</a>
+                </nav>
+              </div>
+            </div>
+            <!-- burger menu stuff -->
+            <div id="bun1"></div>
+            <div id="bun2"></div>
+            <div id="bun3"></div>
+            <div id="bunwall"></div>
+            <div id="x-wrapper">
+              <div id="x1"></div>
+              <div id="x2"></div>
+            </div>
+          </div>
+          <div class="blueline"></div>
+        </div>
+
+        <div id="headercontent-desktop">
+          <img src="Favicon.svg" />
+
+          <nav>
+            <a href="#final">How to</a>
+            <a href="#finalcta">Pricing</a>
+            <a href="#finalcta">Get a site</a>
+          </nav>
+          <div class="blueline"></div>
+        </div>
+      </header>
+      <main>
+        <section
+          class="whitebg"
+          v-bind:id="sectionstext[0].id"
+          v-bind:class="{ purpleBG: enable_purpleBG }"
+        >
+          <div v-bind:id="sectionstext[0].div_id" class="text-mol">
+            <h1>{{sectionstext[0].header}}</h1>
+            <h2>{{sectionstext[0].complementary}}</h2>
+            <!-- <img id="pixel" src="personalized/pixel animation.gif" /> -->
+            <p>{{sectionstext[0].infobit}}</p>
+          </div>
+
+          <div id="demos"></div>
+          <div class="demowrapper">
+            <div id="shoedemo">
+              <div id="shoedemo_ui">
+                <!-- maybe make the shoe img
+                float up and down when card is hovered-->
+                <div id="top-icons">
+                  <span class="material-symbols-outlined">
+                    arrow_back_ios
+                  </span>
+                  <span
+                    class="material-symbols-outlined"
+                    v-bind:class="{ clicked: isClicked }"
+                    v-on:click="clickListener"
+                  >
+                    favorite
+                  </span>
+                </div>
+                <div id="colorpicker">
+                  <!-- u could make the colors selectable?! -->
+                  <div id="color1"></div>
+                  <div id="color2"></div>
+                  <div id="color3"></div>
+                  <div id="color4" v-on:click="purpleBG"></div>
+                </div>
+                <button id="glassbutton"><p>ORDER NOW</p></button>
+                <div id="shoedescription">
+                  <h1>Nike Blue Moons</h1>
+                  <h2>Premium sneakers</h2>
+                  <p>
+                    Unveiled alongside the Team Red and inspired by the URGE
+                    series of works, this new model perfectly combines
+                    aesthetics and boldness!
+                  </p>
+                  <h1>€200</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="demowrapper">
+            <div id="sketchfinal">
+              <div id="orangejuice">
+                <img
+                  src="personalized/compressed_images/orange juice xl 2.png"
+                />
+              </div>
+              <div id="productinfo">
+                <div id="price">
+                  <h1>€1,99</h1>
+                </div>
+                <h2>
+                  • Hand-made <br />
+                  • Super healthy <br />
+                  • Tastes amazing
+                </h2>
+                <button id="buybutton"><h2>BUY</h2></button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="developers">
+          <div id="dev_blur">
+            <div class="text-mol">
+              <h1>{{sectionstext[1].header}}</h1>
+              <h2>{{sectionstext[1].complementary}}</h2>
+              <p>{{sectionstext[1].infobit}}</p>
+            </div>
+            <div id="schools">
+              <!-- remember to compress all the school images/logos!!!!!!!!!!-->
+              <h3>Where our developers study</h3>
+              <div class="school" v-for="school in schools">
+                <img
+                  v-bind:src="school.imageSRC"
+                  v-bind:title="school.title"
+                  v-bind:onmouseover="school.onmouseover"
+                  v-bind:onclick="school.onclick"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <section id="manage"><p>manage</p></section> -->
+        <section id="work">
+          <h3>Companies we've worked with</h3>
+          <div id="partners">
+            <img src="work/logos.svg" />
+          </div>
+          <p>And many more!</p>
+        </section>
+        <section id="final">
+          <!-- selling point 1 -->
+          <div class="sellingpoints">
+            <div class="ball"><h1 id="sp1">1</h1></div>
+            <h2>{{sellingpoints[0].title}}</h2>
+            <h4>{{sellingpoints[0].text}}</h4>
+            <img class="img_a" src="final/ball sketch.svg" />
+          </div>
+          <!-- selling point 2 -->
+          <div class="sellingpoints">
+            <div class="ball"><h1 id="sp2">2</h1></div>
+            <h2>{{sellingpoints[1].title}}</h2>
+            <h4>{{sellingpoints[1].text}}</h4>
+            <div id="texts-wrapper">
+              <div id="texts">
+                <div id="text1">
+                  <p>
+                    Hey, can you make the button look like its made of glass?
+                  </p>
+                </div>
+                <div id="text2">
+                  <p>Yeah no problem, how’s this?</p>
+                </div>
+                <div id="text3"><img src="final/text image.png" /></div>
+                <!--REMEMBER TO COMPRESS IMG LATER-->
+              </div>
+            </div>
+          </div>
+          <!-- selling point 3 -->
+          <div class="sellingpoints">
+            <div class="ball"><h1 id="sp3">3</h1></div>
+            <h2>{{sellingpoints[2].title}}</h2>
+            <h4>{{sellingpoints[2].text}}</h4>
+            <img class="img_a" src="final/Ball demo.png" />
+          </div>
+        </section>
+        <section id="finalcta">
+          <div class="text-mol">
+            <h1>{{sectionstext[3].header}}</h1>
+            <h2>{{sectionstext[3].complementary}}</h2>
+            <p>{{sectionstext[3].infobit}}</p>
+          </div>
+          <div id="plans">
+            <div class="plan" v-for="plan in plans">
+              <p>{{plan.title}}</p>
+              <h4>{{plan.text}}</h4>
+              <div class="price_disclaimer">
+                <p>{{plan.price}}</p>
+                <h5>{{plan.disclaimer}}</h5>
+              </div>
+              <button><p>{{plan.button}}</p></button>
+            </div>
+          </div>
+        </section>
+        <section id="qa">
+          <h4>Got questions?</h4>
+          <h4>Read our Q&A or reach out directly!</h4>
+          <button class="bluefill"><p>FAQ</p></button>
+          <button class="blueempty"><p>Write us an email</p></button>
+        </section>
+      </main>
+      <footer>
+        <div id="footer_black">
+          <h4 title="A portfolio of websites we've designed">Work</h4>
+          <h4>About us</h4>
+          <h4 title="Join our team and work with us">Join us</h4>
+        </div>
+        <div id="footer_blue">
+          <h3>Contact us</h3>
+          <h4 class="tooltip" onclick="copy_email(this)">
+            CEO@StudentCompany.com
+            <span
+              onmouseout="clearspan(this)"
+              id="emailtooltip"
+              class="tooltiptext invisible_tooltip"
+            ></span>
+          </h4>
+          <div id="footer_socialmedia">
+            <!-- 
+              for some reason, the "v-for" method doesn't work here
+              <a
+              v-for="sm in socialmedia"
+              v-bind:title="sm.title"
+              v-bind:href="sm.href"
+              ><img v-bind:href="sm.src"
+            /></a> -->
+            <a title="Contact us on WhatsApp" href="https://www.whatsapp.com/"
+              ><img src="footer/WhatsApp logo.svg"
+            /></a>
+            <a title="Contact us on Messenger" href="https://www.messenger.com/"
+              ><img src="footer/Messenger logo.svg"
+            /></a>
+            <a title="Contact us on Facebook" href="https://www.facebook.com/"
+              ><img src="footer/Facebook logo.svg"
+            /></a>
+            <a title="Contact us on Instagram" href="https://www.instagram.com/"
+              ><img src="footer/Instagram logo.svg"
+            /></a>
+          </div>
+          <h5>© 2022 Kenneth Ruut. All Rights Reserved.</h5>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ================================ -->
+    <!-- Our script connected as a module -->
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

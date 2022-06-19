@@ -1,0 +1,894 @@
+/*TO DO:
+Change text-mol padding height for smaller screens so the content doesn't overflow
+
+
+*/
+
+@media (min-width: 601px) {
+  #personalization .text-mol {
+    width: 60%;
+  }
+
+  #personalization {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+
+    height: max(min(100vh), 900px);
+    /*background image: grid of black lines, drawn with css*/
+  }
+
+  .whitebg {
+    background-image: repeating-linear-gradient(
+        20deg,
+        rgba(0, 0, 0, 0.125) 0px,
+        rgba(0, 0, 0, 0.125) 1px,
+        transparent 2px,
+        transparent 92px,
+        rgba(0, 0, 0, 0.125) 93px
+      ),
+      repeating-linear-gradient(
+        110deg,
+        rgba(0, 0, 0, 0.125) 0px,
+        rgba(0, 0, 0, 0.125) 1px,
+        transparent 2px,
+        transparent 92px,
+        rgba(0, 0, 0, 0.125) 93px
+      );
+  }
+
+  .purpleBG {
+    background-color: #ddc3ff;
+    background-image: repeating-linear-gradient(
+        20deg,
+        #f6ff93 0px,
+        #f6ff93 1px,
+        transparent 2px,
+        transparent 92px,
+        #f6ff93 93px
+      ),
+      repeating-linear-gradient(
+        110deg,
+        #f6ff93 0px,
+        #f6ff93 1px,
+        transparent 2px,
+        transparent 92px,
+        #f6ff93 93px
+      );
+  }
+
+  #personalization_text {
+    padding: min(max(200px), 21.6vh) 0 0 12.25%; /* check out why it isn't enough for smaller screens like 720p*/
+  }
+
+  #personalization_text p {
+    width: 100%;
+  }
+
+  #demos {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    align-self: flex-end;
+    justify-content: center;
+
+    height: min(max(350px), 20.5vw);
+    width: 35%;
+    margin: 0 auto min(max(100px), 5vw) 10px;
+    background-image: url("personalized/sketch.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .demowrapper {
+    position: relative;
+
+    width: min(max(542px), 35vw);
+    height: 100px;
+    align-self: flex-end;
+    margin: 0 min(max(200px), 11vw) 0 0;
+  }
+
+  /*============================================================
+                     ORANGE JUICE CARD DEMO
+  ============================================================*/
+
+  #sketchfinal {
+    z-index: 1;
+    position: absolute;
+    bottom: calc(-2vh - 6vw);
+    left: max(min(10px), 4vw);
+    transform: rotate(7deg);
+    font-family: "Open Sans", sans-serif;
+    transition: transform 0.5s, filter 0.2s;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: min(max(542px), 35vw); /*min(max(542px), 35vw)*/
+    height: min(max(381px), 24.5vw); /*min(max(381px), 24.5vw)*/
+    border-radius: min(max(30px), 1.5vw);
+    align-self: flex-end;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
+  }
+
+  #sketchfinal:hover {
+    transform: rotate(3deg);
+    filter: drop-shadow(0px 0px 20px #ffa723);
+    transition: transform 0.5s, filter 0.2s;
+  }
+
+  #sketchfinal:active {
+    transition: filter 0.2s;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.55));
+  }
+
+  #orangejuice {
+    width: 50%;
+    height: 100%;
+  }
+
+  #orangejuice img {
+    transform: rotate(-17deg);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    filter: drop-shadow(0px 0px 20px #ffce85);
+    object-fit: contain;
+    transition: padding 1s, transform 1s;
+  }
+
+  #sketchfinal:hover > #orangejuice > img {
+    transition: padding 1s, transform 1s;
+    padding: 10px;
+    transform: rotate(-10deg);
+  }
+
+  #productinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    width: 50%;
+    height: 100%;
+  }
+
+  #price {
+    padding: min(max(40px), 2.7vw) 0 0 0;
+    width: 100%;
+    background-image: url("personalized/compressed_images/splash_4.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  #sketchfinal h1 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: min(max(56px), 3.5vw);
+    line-height: min(max(76px), 4.5vw);
+    margin: 0 0 0 20px;
+    align-self: baseline;
+  }
+
+  #sketchfinal h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: min(max(28px), 1.85vw);
+    line-height: min(max(38px), 2.75vw);
+    margin: min(max(25px), 1.3vw) 0 0 0;
+    display: inline-block;
+  }
+
+  #buybutton {
+    border: 2px solid #ffa723;
+    background-color: #ffa723;
+    color: white;
+    border-radius: 10px;
+    width: 90%;
+    padding: 3px;
+    margin: min(max(30px), 1.5vw) 0 0 0;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
+  }
+
+  #buybutton:hover {
+    border: 2px solid;
+    border-color: black;
+    background-color: #ffffff;
+    color: black;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.35));
+    transition: background-color 0.5s, filter 0.5s, border-color 0.5s,
+      color 0.5s;
+  }
+
+  #buybutton:active {
+    border: 2px solid;
+    border-color: black;
+    background-color: black;
+    color: white;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.35));
+    transition: background-color 0.05s, filter 0.05s, border-color 0.05s,
+      color 0.05s;
+  }
+
+  #buybutton > h2 {
+    margin: 0;
+  }
+
+  /*============================================================
+                        SHOE CARD DEMO
+  ============================================================*/
+
+  #shoedemo {
+    position: absolute;
+    top: max(
+      max(-60px),
+      calc((-2.3vw) - 1.65vh)
+    ); /* ? the calc function is weird, negative values need to be in brackets */
+    right: min(max(300px), 15vw);
+    transform: rotate(15deg);
+    z-index: 0;
+
+    margin: 0 auto 0 0;
+    overflow: hidden;
+    width: min(max(325px), 17vw); /*wrapper should be 55%*/
+    height: min(max(465px), 24vw); /*wrapper should be same height*/
+    border-radius: min(max(25px), 1.3vw);
+    background-color: #d8e267;
+    background-image: url("personalized/sneakers demo/compressed/leaves left 3.png"),
+      url("personalized/sneakers demo/compressed/leaves right 3.png");
+    background-size: 60%, 55%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, min(max(150px), 8vw) min(max(125px), 6.5vw);
+
+    filter: drop-shadow(0px 0px 60px rgba(0, 0, 0, 0.2));
+    transition: transform 0.65s, filter 0.25s, right 0.65s, top 0.65s,
+      z-index 1s;
+  }
+
+  #shoedemo:hover {
+    filter: drop-shadow(0px 0px 60px #d8e267);
+    right: min(max(200px), 10vw);
+    top: max(max(-150px), calc((-5vw) - 3.2vh));
+    transform: rotate(5deg);
+    z-index: 1;
+
+    transition: transform 0.55s, filter 0.25s, right 0.55s, top 0.55s;
+  }
+
+  #shoedemo:active {
+    filter: drop-shadow(0px 0px 60px rgba(0, 0, 0, 0.4));
+    transition: transform 0.55s, filter 0.05s, right 0.55s, top 0.55s;
+  }
+
+  #shoedemo_ui {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: 100%;
+    border-radius: min(max(25px), 1.3vw);
+    overflow: hidden;
+    backdrop-filter: blur(3px); /*this blurs the leaves behind*/
+    background-image: url("personalized/sneakers demo/compressed/shoe\ 2.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #top-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: min(max(15px), 0.8vw) min(max(15px), 0.8vw) 0 min(max(20px), 1.1vw);
+    height: auto;
+  }
+
+  #shoedemo .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 200, "opsz" 48;
+    color: #00584b;
+    font-size: min(max(32px), 1.7vw);
+    transition: font-variation-settings 0.05s, color 0.05s;
+  }
+
+  #shoedemo .material-symbols-outlined:hover {
+    font-variation-settings: "wght" 800;
+    color: #002c25;
+    transition: font-variation-settings 0.1s, color 0.1s;
+    cursor: pointer;
+  }
+
+  #shoedemo .clicked {
+    font-variation-settings: "FILL" 1, "wght" 800, "GRAD" 200, "opsz" 48;
+    color: #00584b;
+    cursor: pointer;
+    transition: font-variation-settings 1s, color 1s;
+  }
+
+  #shoedemo .clicked:hover {
+    font-variation-settings: "FILL" 1, "wght" 900, "GRAD" 200, "opsz" 48;
+    color: #00584b;
+    cursor: pointer;
+  }
+
+  #colorpicker {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: min(max(32px), 1.7vw);
+    width: 45%;
+    border-radius: min(max(40px), 2.1vw);
+    background-color: #00584b;
+  }
+
+  #color1 {
+    width: auto;
+    height: 75%;
+    aspect-ratio: 1;
+    background: linear-gradient(45deg, #fcff6d 50%, #feffca 100%);
+    transform: rotate(15deg);
+    border-radius: min(max(20px), 1.1vw);
+  }
+
+  #color2 {
+    width: auto;
+    height: 75%;
+    aspect-ratio: 1;
+    background: linear-gradient(45deg, #74ffc5 50%, #d1ffec 100%);
+    transform: rotate(15deg);
+    border-radius: min(max(20px), 1.1vw);
+  }
+
+  #color3 {
+    width: auto;
+    height: 75%;
+    aspect-ratio: 1;
+    background: linear-gradient(45deg, #50aaec 50%, #bbe2ff 100%);
+    transform: rotate(15deg);
+    border-radius: min(max(20px), 1.1vw);
+    box-shadow: 0px 0px 0px 2px #ffffff, inset 0px 0px 0px 1px #000000;
+  }
+
+  #color4 {
+    width: auto;
+    height: 75%;
+    aspect-ratio: 1;
+    background: linear-gradient(45deg, #c79bff 50%, #f0e4ff 100%);
+    transform: rotate(15deg);
+    border-radius: min(max(20px), 1.1vw);
+    cursor: pointer;
+  }
+
+  #glassbutton {
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35);
+    margin: min(max(10px), 0.55vw) 0 0 0;
+
+    height: min(max(55px), 2.8vw);
+    width: min(max(225px), 11.4vw);
+
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 8px 8px 15px rgba(255, 255, 255, 0.6),
+      inset 0px 0px 50px rgba(80, 170, 236, 0.3), inset 0px 0px 40px #ffffff;
+    backdrop-filter: blur(2px);
+    /* Note: backdrop-filter has minimal browser support */
+    border: none;
+    border-radius: min(max(12px), 0.65vw);
+    transition: background 1s, box-shadow 1s, width 0.1s;
+  }
+
+  #glassbutton:hover {
+    background: linear-gradient(
+      45deg,
+      #50aaec 20%,
+      #bbe2ff 100%
+    ); /*linear-gradient(45deg, #50aaec 50%, #bbe2ff 100%)*/
+    box-shadow: inset 8px 8px 15px rgba(255, 255, 255, 0),
+      inset 0px 0px 50px rgba(80, 170, 236, 0), inset 0px 0px 0px #ffffff;
+    transition: background 1s, box-shadow 1s, width 0.1s;
+  }
+
+  #glassbutton:active {
+    transition: background 1s, width 0.1s;
+    background: linear-gradient(45deg, #006cff 20%, #bbe2ff 100%);
+    width: min(max(245px), 12.4vw);
+  }
+
+  #glassbutton p {
+    font-weight: 900;
+    font-size: min(max(30px), 1.55vw);
+    line-height: min(max(38px), 1.95vw);
+  }
+
+  #shoedemo h1,
+  #shoedemo h2,
+  #shoedemo p {
+    color: white;
+    font-family: "Fraunces";
+    font-style: normal;
+    text-rendering: geometricPrecision;
+  }
+
+  #shoedescription p {
+    font-weight: 700;
+    font-size: min(max(26px), 1.35vw);
+    line-height: min(max(31px), 1.6vw);
+  }
+
+  #shoedescription h1 {
+    font-weight: 900;
+    font-size: min(max(20px), 1.1vw);
+    line-height: min(max(25px), 1.35vw);
+  }
+
+  #shoedescription h2 {
+    font-weight: 700;
+    font-size: min(max(14px), 0.75vw);
+    line-height: min(max(17px), 0.9vw);
+  }
+
+  #shoedescription p {
+    margin: min(max(5px), 0.3vw) 0 min(max(7px), 0.4vw) 0;
+    font-weight: 600;
+    font-size: min(max(8.5px), 0.45vw);
+    line-height: min(max(10px), 0.55vw);
+  }
+
+  #shoedescription {
+    padding: 3% 4%;
+    margin: auto min(max(15px), 0.8vw) min(max(15px), 0.8vw) auto;
+    align-self: flex-end;
+    width: 60%;
+    height: auto;
+    background-color: #00584b;
+    border-radius: min(max(15px), 0.8vw);
+  }
+}
+
+/* ====================================================== 
+                    MOBILE MEDIA QUERY
+====================================================== */
+
+@media (max-width: 600px) {
+  section {
+    overflow: hidden;
+  }
+
+  #personalization {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    height: 1180px;
+    /*background image: grid of black lines, drawn with css*/
+  }
+
+  .whitebg {
+    background-image: repeating-linear-gradient(
+        20deg,
+        rgba(0, 0, 0, 0.2) 0px,
+        rgba(0, 0, 0, 0.2) 1px,
+        transparent 2px,
+        transparent 67px,
+        rgba(0, 0, 0, 0.2) 68px
+      ),
+      repeating-linear-gradient(
+        110deg,
+        rgba(0, 0, 0, 0.2) 0px,
+        rgba(0, 0, 0, 0.2) 1px,
+        transparent 2px,
+        transparent 67px,
+        rgba(0, 0, 0, 0.2) 68px
+      );
+  }
+
+  .purpleBG {
+    background-color: #c79bff;
+    background-image: repeating-linear-gradient(
+        20deg,
+        rgba(0, 0, 0, 0.2) 0px,
+        rgba(0, 0, 0, 0.2) 1px,
+        transparent 2px,
+        transparent 67px,
+        rgba(0, 0, 0, 0.2) 68px
+      ),
+      repeating-linear-gradient(
+        110deg,
+        rgba(0, 0, 0, 0.2) 0px,
+        rgba(0, 0, 0, 0.2) 1px,
+        transparent 2px,
+        transparent 67px,
+        rgba(0, 0, 0, 0.2) 68px
+      );
+  }
+
+  #personalization_text {
+    width: auto;
+    padding-top: 100px;
+
+    height: min-content;
+  }
+
+  #demos {
+    display: inline-flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-end;
+    height: 210px;
+    width: 100%; /*440px*/
+    margin: 0 12.25% 0 12.25%;
+    background-image: url("personalized/sketch.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0 0 0 0px;
+  }
+
+  .demowrapper {
+    position: relative;
+    width: 45%;
+    height: 260px;
+  }
+
+  /*============================================================
+                     ORANGE JUICE CARD DEMO
+  ============================================================*/
+
+  #sketchfinal {
+    position: absolute;
+    right: -10vw;
+    transform: rotate(7deg);
+    transition: transform 0.35s, filter 0.25s, right 0.35s;
+
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 370px;
+    height: 260px;
+    border-radius: 20px;
+    align-self: flex-end;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
+  }
+
+  #sketchfinal:hover {
+    transition: transform 0.35s, filter 0.25s, right 0.35s;
+
+    right: -5vw;
+    filter: drop-shadow(0px 0px 20px #ffa723);
+    transform: rotate(3deg);
+  }
+
+  #sketchfinal:active {
+    transition: transform 0.35s, filter 0.25s, right 0.35s;
+
+    right: -5vw;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.45));
+  }
+
+  #orangejuice {
+    width: 50%;
+    height: 100%;
+  }
+
+  #sketchfinal > #orangejuice > img {
+    transform: rotate(-17deg);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    filter: drop-shadow(0px 0px 20px #ffce85);
+    transition: transform 1s, padding 1s, filter 1s;
+  }
+
+  /*if you hover the card the orange juice picture also moves,
+  creating a sort of 3d effect*/
+  #sketchfinal:hover > #orangejuice > img {
+    transition: transform 1s, padding 1s, filter 1s;
+
+    transform: rotate(-9deg);
+    padding: 15px;
+    filter: drop-shadow(0px 0px 10px #ffce85);
+  }
+
+  #productinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 50%;
+    height: 100%;
+    padding-bottom: 10px;
+  }
+
+  #price {
+    padding: 20px 0 0 0;
+    width: 100%;
+    background-image: url("personalized/compressed_images/splash_4.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  #sketchfinal h1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 49px;
+    margin: 0 0 0 10px;
+    align-self: baseline;
+  }
+
+  #sketchfinal h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 20px 0 0 0;
+    display: inline-block;
+  }
+
+  #buybutton {
+    border: 2px solid #ffa723;
+    background-color: #ffa723;
+    color: white;
+    border-radius: 10px;
+    width: 90%;
+    padding: 3px;
+    margin: 20px 0 0 0;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
+  }
+
+  #buybutton:hover {
+    border: 2px solid;
+    border-color: black;
+    background-color: #ffffff;
+    color: black;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.35));
+    transition: background-color 0.5s, filter 0.5s, border-color 0.5s,
+      color 0.5s;
+  }
+
+  #buybutton:active {
+    border: 2px solid;
+    border-color: black;
+    background-color: black;
+    color: white;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.35));
+    transition: background-color 0.05s, filter 0.05s, border-color 0.05s,
+      color 0.05s;
+  }
+
+  #buybutton > h2 {
+    margin: 0;
+  }
+  /*============================================================
+                        SHOE CARD DEMO
+  ============================================================*/
+
+  #shoedemo {
+    position: absolute;
+    right: 55px;
+    top: 50px;
+    transform: rotate(7deg);
+    z-index: 0;
+
+    margin: 0 auto 0 0;
+    overflow: hidden;
+    width: 265px; /*wrapper should be 55%*/
+    height: 390px; /*wrapper should be same height*/
+    border-radius: 25px;
+    background-color: #d8e267;
+    background-image: url("personalized/sneakers demo/compressed/leaves left 3.png"),
+      url("personalized/sneakers demo/compressed/leaves right 3.png");
+    background-size: 60%, 55%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, 125px 125px;
+
+    filter: drop-shadow(0px 0px 60px rgba(0, 0, 0, 0.2));
+    transition: transform 0.55s, filter 0.25s, right 0.75s, z-index 0.75s;
+  }
+
+  #shoedemo:hover {
+    filter: drop-shadow(0px 0px 60px #d8e267);
+    transform: rotate(4deg);
+    right: -20px;
+    z-index: 1;
+
+    transition: transform 0.55s, filter 0.25s, right 0.75s, z-index 0s;
+  }
+
+  #shoedemo:active {
+    filter: drop-shadow(0px 0px 60px #d8e267);
+    right: -20px;
+    transform: rotate(4deg);
+    z-index: 1;
+
+    transition: transform 0.55s, filter 0.25s, right 0.75s, z-index 0.85s;
+  }
+
+  #shoedemo_ui {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+    backdrop-filter: blur(2px); /*this blurs the leaves behind*/
+    background-image: url("personalized/sneakers demo/compressed/shoe\ 2.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #top-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 15px 15px 0 20px;
+    height: auto;
+  }
+
+  #shoedemo .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 200, "opsz" 48;
+    color: #00584b;
+    font-size: 32px;
+    transition: font-variation-settings 0.05s, color 0.05s;
+  }
+
+  #shoedemo .material-symbols-outlined:hover {
+    font-variation-settings: "wght" 800;
+    color: #002c25;
+    transition: font-variation-settings 0.1s, color 0.1s;
+    cursor: pointer;
+  }
+
+  #shoedemo .clicked {
+    font-variation-settings: "FILL" 1, "wght" 800, "GRAD" 200, "opsz" 48;
+    color: #00584b;
+    cursor: pointer;
+    transition: font-variation-settings 1s, color 1s;
+  }
+
+  #shoedemo .clicked:hover {
+    font-variation-settings: "FILL" 1, "wght" 900, "GRAD" 200, "opsz" 48;
+    color: #00584b;
+    cursor: pointer;
+  }
+
+  #colorpicker {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 32px;
+    width: 50%;
+    border-radius: 40px;
+    background-color: #00584b;
+  }
+
+  #color1 {
+    width: auto;
+    height: 75%;
+    aspect-ratio: 1;
+    background: linear-gradient(45deg, #fcff6d 50%, #feffca 100%);
+    transform: rotate(15deg);
+    border-radius: 20px;
+  }
+
+  #color2 {
+    width: auto;
+    height: 75%;
+    aspect-ratio: 1;
+    background: linear-gradient(45deg, #74ffc5 50%, #d1ffec 100%);
+    transform: rotate(15deg);
+    border-radius: 20px;
+  }
+
+  #color3 {
+    width: auto;
+    height: 75%;
+    aspect-ratio: 1;
+    background: linear-gradient(45deg, #50aaec 50%, #bbe2ff 100%);
+    transform: rotate(15deg);
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px 2px #ffffff, inset 0px 0px 0px 1px #000000;
+  }
+
+  #color4 {
+    width: auto;
+    height: 75%;
+    aspect-ratio: 1;
+    background: linear-gradient(45deg, #c79bff 50%, #f0e4ff 100%);
+    transform: rotate(15deg);
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  #glassbutton {
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35);
+    margin: 10px 0 0 0;
+
+    height: 45px;
+    width: 195px;
+
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 8px 8px 15px rgba(255, 255, 255, 0.6),
+      inset 0px 0px 50px rgba(80, 170, 236, 0.3), inset 0px 0px 40px #ffffff;
+    backdrop-filter: blur(2px);
+    /* Note: backdrop-filter has minimal browser support */
+    border: none;
+    border-radius: 10px;
+    transition: background 1s, box-shadow 1s, width 0.1s;
+  }
+
+  #glassbutton:hover {
+    background: linear-gradient(
+      45deg,
+      #50aaec 20%,
+      #bbe2ff 100%
+    ); /*linear-gradient(45deg, #50aaec 50%, #bbe2ff 100%)*/
+    box-shadow: inset 8px 8px 15px rgba(255, 255, 255, 0),
+      inset 0px 0px 50px rgba(80, 170, 236, 0), inset 0px 0px 0px #ffffff;
+    transition: background 1s, box-shadow 1s, width 0.1s;
+  }
+
+  #glassbutton:active {
+    transition: background 1s, width 0.1s;
+    background: linear-gradient(45deg, #006cff 20%, #bbe2ff 100%);
+    width: calc(195px + 20px);
+  }
+
+  #shoedemo h1,
+  #shoedemo h2,
+  #shoedemo p {
+    color: white;
+    font-family: "Fraunces";
+    font-style: normal;
+    text-rendering: geometricPrecision;
+  }
+
+  #shoedemo p {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+  }
+
+  #shoedescription h1 {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  #shoedescription h2 {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  #shoedescription p {
+    margin: 5px 0 7px 0;
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 11px;
+  }
+
+  #shoedescription {
+    padding: 3% 4%;
+    margin: 110px 15px 0 auto;
+    width: 60%;
+    height: 130px;
+    background-color: #00584b;
+    border-radius: 10px;
+  }
+}

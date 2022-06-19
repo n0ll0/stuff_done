@@ -1,0 +1,327 @@
+header {
+  background-color: white;
+}
+
+.invisible {
+  display: none;
+}
+
+/*===================================================
+                DESKTOP MEDIA QUERY
+=====================================================*/
+@media (min-width: 601px) {
+  #headercontent-mobile {
+    display: none;
+  }
+
+  header {
+    width: 100%;
+    height: 60px;
+  }
+
+  #headercontent-desktop {
+    width: 100%;
+    padding: 0 12.25%;
+    height: 100%;
+    background-color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #headercontent-desktop > .blueline {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: var(--brandcolor);
+    top: 60px;
+    left: 0;
+    right: 0;
+  }
+
+  header img {
+    height: 40px;
+    width: 40px;
+    border-radius: 7px;
+  }
+
+  header nav > a {
+    margin: 0 10px;
+  }
+}
+
+/* ====================================================== 
+                    MOBILE MEDIA QUERY
+====================================================== */
+
+@media (max-width: 600px) {
+  #headercontent-desktop {
+    display: none;
+    width: 100%;
+    padding: 0 12.25%;
+    height: 100%;
+    background-color: red;
+  }
+
+  header {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  header img {
+    height: 40px;
+    width: 40px;
+    border-radius: 7px;
+  }
+
+  #headercontent-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-grow: 1;
+    width: 100%;
+
+    display: flex;
+    padding: 0 12.5%;
+  }
+
+  .blueline {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: var(--brandcolor);
+    align-self: flex-end;
+
+    top: 75px;
+    left: 0;
+    right: 0;
+  }
+
+  /*================
+  BURGER MENU ANIMATION
+  =================*/
+
+  #hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    width: 50px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    background-color: none;
+  }
+
+  /*this is the top bun*/
+  #bun1 {
+    height: 4px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    z-index: 3;
+  }
+
+  /*this is the middle bun*/
+  #bun2 {
+    height: 4px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    top: 14px;
+    transition: display 10s;
+    z-index: 3;
+  }
+
+  /*this is the bottom bun*/
+  #bun3 {
+    height: 4px;
+    width: 100%;
+    background-color: black;
+    z-index: 3;
+  }
+
+  .bun1_an {
+    animation: bun-drop 0.5s cubic-bezier(1, 0, 0.8, 1) forwards;
+  }
+
+  .bun1_an_R {
+    animation: bun-rise 0.5s cubic-bezier(1, 0, 0.8, 1) forwards;
+  }
+
+  @keyframes bun-drop {
+    from {
+      top: 0;
+    }
+    50% {
+      height: 4px;
+    }
+    to {
+      top: 26px;
+      height: 0px;
+    }
+  }
+
+  @keyframes bun-rise {
+    from {
+      top: 26px;
+      height: 0px;
+    }
+    50% {
+      height: 4px;
+    }
+    to {
+      top: 0;
+    }
+  }
+
+  .bun_disappear {
+    display: none;
+  }
+
+  .bun_disappear2 {
+    transition: height 0.05s;
+    height: 0px !important;
+  }
+
+  .bun_disappear2_R {
+    transition: height 0.1s;
+    height: 3px !important;
+  }
+
+  #bunwall {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+
+  .bunwall_lower {
+    transition: height 0.5s cubic-bezier(1, 0, 0.8, 1);
+    height: 0 !important;
+
+    /*animation: bunwall 1s cubic-bezier(1, 0, 0.8, 1) forwards;*/
+  }
+
+  .bunwall_lower_R {
+    transition: height 0.5s cubic-bezier(1, 0, 0.8, 1);
+    height: 100% !important;
+  }
+
+  @keyframes bunwall {
+    from {
+      height: 100% !important;
+    }
+    to {
+      height: 0 !important;
+    }
+  }
+
+  #x-wrapper {
+    z-index: 1;
+    position: absolute;
+    left: 5px;
+    right: 0;
+    top: 13px;
+    bottom: 0;
+  }
+
+  #x1 {
+    position: absolute;
+    width: 39px;
+    height: 3px;
+    background-color: black;
+    transform: rotate(45deg);
+  }
+
+  #x2 {
+    position: absolute;
+    width: 39px;
+    height: 3px;
+    background-color: black;
+    transform: rotate(135deg);
+  }
+
+  #close-menu {
+    position: absolute;
+
+    background-color: red;
+    fill: red;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  #mobile_nav {
+    pointer-events: none;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 55vw;
+    height: 100vh;
+    background-color: white;
+    margin-left: auto;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: right 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+  }
+
+  .nav-close {
+    transition: right 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+    right: -55vw !important;
+  }
+
+  #mobile_nav > .blueline {
+    margin-top: 0px;
+    width: 5px;
+    height: 100%;
+    align-self: flex-start;
+  }
+
+  #nav {
+    margin-top: 75px;
+    width: 100%;
+  }
+
+  nav {
+    padding: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav > a {
+    pointer-events: auto;
+    margin: 15px 0;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.0245em;
+
+    cursor: pointer;
+  }
+
+  nav > a:active {
+    font-weight: 800;
+  }
+}

@@ -1,0 +1,162 @@
+#developers h1 {
+  color: var(--brandcolor);
+}
+
+#developers h2,
+#developers p,
+#developers h3 {
+  color: white;
+}
+
+#developers {
+  background: black;
+}
+
+#dev_blur {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*===================================================
+                DESKTOP MEDIA QUERY
+=====================================================*/
+@media (min-width: 601px) {
+  #developers {
+    height: max(min(100vh), 800px);
+    filter: brightness(1.1) contrast(1.0025) saturate(1.3);
+
+    background-image: url("developers/assets/compressed/background/background 2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #developers .text-mol {
+    padding: 0 30% 0 12.25%;
+  }
+
+  #schools {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: min-content;
+    width: 55%;
+    padding: 0 0 0 12.5%;
+    margin: min(max(85px), 4.4vw) 0 0 0;
+  }
+
+  #schools h3 {
+    align-self: flex-start;
+    width: 100%;
+    display: inline-block;
+  }
+
+  .school {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 22%;
+    height: auto;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 100%;
+    margin: min(max(35px), 1.8vw) 0 0 0;
+    overflow: hidden;
+  }
+
+  .school img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    padding: 4%;
+  }
+
+  .rotate {
+    animation-name: school_rotate;
+    animation-duration: 850ms;
+  }
+
+  @keyframes school_rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* ====================================================== 
+                    MOBILE MEDIA QUERY
+====================================================== */
+
+@media (max-width: 600px) {
+  #developers {
+    background-image: url("developers/assets/compressed/background/background 2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: min(max(980px), 110vh);
+  }
+
+  #developers .text-mol {
+    padding: 0 12.25% 0 12.25%;
+  }
+
+  #schools {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    height: min-content;
+    width: 100%;
+    padding: 0 12.5% 0 12.5%;
+    margin: 85px 0 0 0;
+  }
+
+  #schools h3 {
+    align-self: flex-start;
+    width: 100%;
+    display: inline-block;
+  }
+
+  .school {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 22%;
+    height: auto;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 100%;
+    margin: 35px 0 0 0;
+    overflow: hidden;
+  }
+
+  .school img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    padding: 4%;
+  }
+
+  .rotate {
+    animation-name: school_rotate;
+    animation-duration: 850ms;
+  }
+
+  @keyframes school_rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

@@ -1,0 +1,54 @@
+#qa {
+  background-color: white;
+}
+
+/*===================================================
+                DESKTOP MEDIA QUERY
+=====================================================*/
+@media (min-width: 601px) {
+  #qa {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2% 12.25%;
+    text-align: center;
+
+    height: min-content;
+  }
+
+  #qa > * {
+    margin: 7.5px auto;
+  }
+
+  #qa > h4:first-child {
+    font-weight: 900;
+    margin: 0;
+  }
+}
+
+/* ====================================================== 
+                    MOBILE MEDIA QUERY
+====================================================== */
+
+@media (max-width: 600px) {
+  #qa {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5% 12.25%;
+    text-align: center;
+
+    height: min-content;
+  }
+
+  #qa > * {
+    margin: 7.5px 0;
+  }
+
+  #qa > h4:first-child {
+    font-weight: 900;
+    margin: 0;
+  }
+}

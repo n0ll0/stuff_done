@@ -1,0 +1,314 @@
+#final {
+  background-color: #006cff;
+}
+
+/*===================================================
+                DESKTOP MEDIA QUERY
+=====================================================*/
+@media (min-width: 601px) {
+  #final {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 12.25%;
+
+    height: min-content;
+    text-align: center;
+  }
+
+  #final h1,
+  #final h2,
+  #final h3,
+  #final h4,
+  #final p {
+    color: white;
+    text-align: center;
+  }
+
+  .sellingpoints {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 33%;
+    padding: 5% 1.5%;
+    height: max(min(100vh), 800px);
+    background-color: transparent;
+  }
+
+  .sellingpoints h2 {
+    margin-bottom: 20px;
+  }
+
+  .ball {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color: white;
+    border-radius: 100%;
+    width: min-content;
+    aspect-ratio: 1/1;
+    margin-bottom: 10px;
+  }
+
+  .ball > h1 {
+    margin: 2px 4px 0 0;
+    color: var(--brandcolor) !important;
+    user-select: none;
+  }
+
+  #final .img_a {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    flex-grow: 1;
+    margin: 40px 0 20px 0;
+  }
+
+  #texts-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-grow: 1;
+    max-width: 100% !important;
+    margin-top: 20px;
+  }
+
+  #texts {
+    /* add text tails with "background image" attribute*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    margin: 0 !important;
+    width: 100% !important;
+    height: fit-content;
+    /*flex-grow: 1;*/
+    background-color: white;
+    margin-top: 20px;
+    border-radius: min(max(20px), 1.02vw);
+    padding: 10px;
+  }
+
+  #texts > * {
+    margin: 5px 0;
+  }
+
+  #text1 {
+    display: flex;
+
+    padding: 10px;
+    max-width: 60%;
+    width: max-content;
+    height: min-content;
+    border-radius: 10px;
+    background-color: #02d924;
+    align-self: flex-end;
+  }
+
+  #text1 p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: min(max(19px), 0.96vw);
+    line-height: min(max(22px), 1.15vw);
+    text-align: left;
+    user-select: none;
+  }
+
+  #text2 {
+    display: flex;
+
+    padding: 10px;
+    max-width: 60%;
+    width: max-content;
+    height: min-content;
+    border-radius: 10px;
+    background-color: #e9e9eb;
+  }
+
+  #text3 {
+    display: flex;
+
+    padding: 5px;
+    max-width: 60%;
+    height: min-content;
+    /*    flex-grow: 1;*/
+    border-radius: 10px;
+    background-color: #e9e9eb;
+  }
+
+  #text3 > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  #text2 p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: min(max(19px), 0.96vw);
+    line-height: min(max(22px), 1.15vw);
+    color: black;
+    text-align: left;
+    user-select: none;
+  }
+}
+
+/* ====================================================== 
+                    MOBILE MEDIA QUERY
+====================================================== */
+
+@media (max-width: 600px) {
+  #final {
+    height: min-content;
+    text-align: center;
+    padding-bottom: 5%;
+  }
+
+  #final h1,
+  #final h2,
+  #final h3,
+  #final h4,
+  #final p {
+    color: white;
+    text-align: center;
+  }
+
+  .sellingpoints {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    padding: 5% 6.5% 0 6.5%;
+    height: 590px;
+    background-color: transparent;
+  }
+
+  .sellingpoints h2 {
+    margin-bottom: 20px;
+  }
+
+  .ball {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color: white;
+    border-radius: 100%;
+    width: min-content;
+    aspect-ratio: 1/1;
+    margin-bottom: 10px;
+  }
+
+  .ball > h1 {
+    margin: 2px 1px 0 0;
+    color: var(--brandcolor) !important;
+    user-select: none;
+  }
+
+  #final .img_a {
+    /*change to "#final .img" later*/
+    object-fit: cover;
+    height: 100%;
+    flex-grow: 1;
+
+    border-radius: 20px; /**/
+    margin-top: 10px;
+  }
+
+  #texts-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-grow: 1;
+    max-width: 100% !important;
+    margin-top: 20px;
+  }
+
+  #texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    width: 100%;
+    flex-grow: 1;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  #texts > * {
+    margin: 5px 0;
+  }
+
+  #text1 {
+    display: flex;
+
+    padding: 10px;
+    max-width: 60%;
+    width: max-content;
+    height: min-content;
+    border-radius: 10px;
+    background-color: #02d924;
+    align-self: flex-end;
+  }
+
+  #text1 p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    text-align: left;
+    user-select: none;
+  }
+
+  #text2 {
+    display: flex;
+
+    padding: 10px;
+    max-width: 60%;
+    width: max-content;
+    height: min-content;
+    border-radius: 10px;
+    background-color: #e9e9eb;
+  }
+
+  #text3 {
+    display: flex;
+
+    padding: 5px;
+    max-width: 60%;
+    height: min-content;
+    /*    flex-grow: 1;*/
+    border-radius: 10px;
+    background-color: #e9e9eb;
+  }
+
+  #text3 > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  #text2 p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    color: black;
+    text-align: left;
+    user-select: none;
+  }
+}
